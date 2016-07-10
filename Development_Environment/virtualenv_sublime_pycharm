@@ -10,6 +10,8 @@ $ mkdir django-project
 $ cd django-project
 
 Activate
+--------
+
 $ virtualenv .
 $ source bin/activate
 
