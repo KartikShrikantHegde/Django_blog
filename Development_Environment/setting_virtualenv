@@ -1,0 +1,6 @@
+$ pip install virtualenv or
+$ pip install virtualenc --upgrade (If already installed)
+
+
+$ cd PycharmProjects
+$ mkdir django-project
