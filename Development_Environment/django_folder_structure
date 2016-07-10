@@ -15,7 +15,9 @@ blog                        # directory with same name as root. Therefore change
   __init__.py   
   setting.py                # to set all the default stuffs  
   urls.py                   # manage urls requests
-  wsgi.py
+  wsgi.py                   # Allows the project to be in a deployable application
+
+$ python manage.py          # gives all the commands supported by manage.py
 
 Django-project looks for these above files
 
