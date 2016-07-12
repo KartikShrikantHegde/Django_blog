@@ -1,0 +1,22 @@
+Apps are not the real apps in django.
+
+They are the small tiny components of the main application
+
+$python manage.py startapp myapp
+--------------------------------------------------------------
+
+folder structure :
+
+migrations
+__init__.py              - to make the myapp folder into python module
+admin.py                 - to associate this app into the admin
+apps.py                  - New thing from django for app config. Leave as it is
+models.py                - map our data into database
+test.py                  - to automate the testing
+views.py                 - display
+
+Models and Views are the core of an app
+
+So start with Models.
+
+------------------------------------------------------------------
