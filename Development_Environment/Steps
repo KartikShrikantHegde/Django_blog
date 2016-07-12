@@ -1,0 +1,11 @@
+1. Setup - using virtualenv_sublime_pycharm or django_folder_structure
+2. super_user
+3. app
+4. models.py in app
+5. settings.py in src
+6. Migrate in terminal - python manage.py migrate
+   this gives migration has changed but not applied. So it says models has changed but not pushed to DB for sync
+
+7. So run - python manage.py makemigrations
+8. again run - python manage.py migrate
+this ll make sure db is in sync with the models.
