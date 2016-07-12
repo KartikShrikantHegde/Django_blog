@@ -19,4 +19,9 @@ Models and Views are the core of an app
 
 So start with Models.
 
+Once model is set up inside the app, add the app into settings.py in source
+under the installed app section.
+
+Note: Name of the app is added into installed app of settings.py not the class name of the models.py in the app
+
 ------------------------------------------------------------------
