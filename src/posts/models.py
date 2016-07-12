@@ -10,7 +10,7 @@ class Post(models.Model):
     Username, title are for char fields
     '''
 
-    title = models.CharField()
+    title = models.CharField(max_length=120)
     content = models.TextField()
 
     ''' Auto_now        --> Every time it is something is saved into database it will update it
@@ -22,4 +22,9 @@ class Post(models.Model):
 
 
     def __unicode__(self):
+        return self.title
+
+# for python 3.0 users
+
+    def __str__(self):
         return self.title
