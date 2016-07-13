@@ -17,3 +17,7 @@ this ll make sure db is in sync with the models.
 11. we need to run the server again - now after this if you go to admin url you can see posts there
 
 12. Now add a post from admin. - This will add the post to database
+
+13. Customization to django admin
+
+14. CRUD with admin
