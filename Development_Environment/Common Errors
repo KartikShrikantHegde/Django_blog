@@ -1,0 +1,2 @@
+If the migrations are not done in models to db for sync and then if the admin is on browser it ll show no tables exists.
+So migrations are must.
