@@ -9,3 +9,11 @@
 7. So run - python manage.py makemigrations
 8. again run - python manage.py migrate
 this ll make sure db is in sync with the models.
+
+9. Now adding models to admin
+
+10. So open up admin.py to register your models
+
+11. we need to run the server again - now after this if you go to admin url you can see posts there
+
+12. Now add a post from admin. - This will add the post to database
