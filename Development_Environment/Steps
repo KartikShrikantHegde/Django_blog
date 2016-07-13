@@ -20,4 +20,8 @@ this ll make sure db is in sync with the models.
 
 13. Customization to django admin
 
-14. CRUD with admin
+14. CRUD with admin  - With database its INSERT, SELECT, UPDATE, DELETE
+CRUD is also done on forms using POST,GET,PUT,DELETE  -- CUD requires permissions on views
+
+15. Creating views for html contents. so we have things database.
+Views.py - developing function based views
