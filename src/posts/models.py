@@ -20,6 +20,8 @@ class Post(models.Model):
     updated = models.DateTimeField(auto_now=True,auto_now_add=False)
     timestamp = models.DateTimeField(auto_now=False,auto_now_add=True)
 
+# If the unicode data is not there then it will just show 'Post object' in the admin page rather than showing the actual object
+# So the unicode is important
 
     def __unicode__(self):
         return self.title
