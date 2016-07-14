@@ -25,3 +25,13 @@ CRUD is also done on forms using POST,GET,PUT,DELETE  -- CUD requires permission
 
 15. Creating views for html contents. so we have things database.
 Views.py - developing function based views
+
+16. Now these views need to be rendered as url. So go urls.py to register the views in urls.py
+
+17. create urls.py in posts. these includes all the urls for posts app. now we can include all these urls back in
+    urls.py in blog
+
+    so this is how it works - import views of polls app into urls.py of polls. so that it can list the urls for this
+    specific apps views. and then we can import these urls into main app urls.py.
+
+18. go to views.py to add crud operations -
