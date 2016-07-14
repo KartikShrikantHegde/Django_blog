@@ -14,9 +14,21 @@ Including another URLconf
     2. Import the include() function: from django.conf.urls import url, include
     3. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
-from django.conf.urls import url
+from django.conf.urls import include,url
 from django.contrib import admin
+
+''' Another way is :
+from posts import views and the down url pattern would be url(r'^posts/$',views.post_home)
+If there are more than one view that is imported from diffrent application then you write
+
+from posts import views as posts_view
+from contacts import views as contacts_view
+
+and url would be url(r'^posts/$',post_view.post_home)
+But this is not a preferred method.
+'''
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^posts/', include("posts.urls")),
 ]
