@@ -58,3 +58,31 @@ This is a dynamic way of linking the views in templates using {{}}.
 you can also add context based on if user is authenticated. this works because i am still logged into admin.
 if i logout this case doesnt work.
 
+21. Query set basics:
+
+Close the server and login to python shell as python manage.py shell - this allows to use python + django shell
+
+this gives us the database interactions.
+
+##
+from posts.models import Post
+Post.objects.all() - gives all the objects in database
+
+##
+we can filter things like this :
+Post.objects.filter(title__icontains="" ) - icontains used is used to match the cases.
+
+## create new content from database as
+
+Post.objects.create(title='United',content='my club')
+
+## Looping through
+
+queryset = Post.objects.all()
+for obj in queryset:
+    print obj.title
+    print obj.content
+
+
+we can do the same in our controller - i.e in views.py and add the queryset attribute into context
+and make changes in index template where you can view objects or loop through the objects.
