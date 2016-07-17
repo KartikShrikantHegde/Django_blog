@@ -43,6 +43,7 @@ BASE_DIR - Is the path where src is located. But its not hardcoded, hence uses O
 src = /home/kartik/PycharmProjects/django_blog
 
 Now, make a folder inside src and add the path in settings.py -
-in templates dir would be []. Add the path here as os.path.join(base_dir, )
+in templates dir would be []. Add the path here as os.path.join(base_dir,'templates' )
 
+if this path is not added then django cant locate the template to load.
 
