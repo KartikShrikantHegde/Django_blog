@@ -34,4 +34,15 @@ Views.py - developing function based views
     so this is how it works - import views of polls app into urls.py of polls. so that it can list the urls for this
     specific apps views. and then we can import these urls into main app urls.py.
 
-18. go to views.py to add crud operations -
+18. go to views.py to add crud operations
+
+19. Next is setting up django templates.
+
+BASE_DIR - Is the path where src is located. But its not hardcoded, hence uses OS path module to locate it. In Our case,
+
+src = /home/kartik/PycharmProjects/django_blog
+
+Now, make a folder inside src and add the path in settings.py -
+in templates dir would be []. Add the path here as os.path.join(base_dir, )
+
+
