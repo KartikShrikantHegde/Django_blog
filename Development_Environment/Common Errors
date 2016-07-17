@@ -1,2 +1,4 @@
-If the migrations are not done in models to db for sync and then if the admin is on browser it ll show no tables exists.
+1. If the migrations are not done in models to db for sync and then if the admin is on browser it ll show no tables exists.
 So migrations are must.
+
+2. templates path must be there in settings.py. otherwise django cant locate the templates and will throw an error.
