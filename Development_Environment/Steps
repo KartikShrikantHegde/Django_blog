@@ -53,3 +53,8 @@ add contexts to dictionaries in views.py and define what it is.
 
 Use that in templates.
 
+This is a dynamic way of linking the views in templates using {{}}.
+
+you can also add context based on if user is authenticated. this works because i am still logged into admin.
+if i logout this case doesnt work.
+
