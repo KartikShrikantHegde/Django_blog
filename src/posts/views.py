@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-
+from .models import Post
 # Create your views here.
 
 # This is a function based view, so it takes in request and returns a response
@@ -19,9 +19,10 @@ def post_detail(request):
     return render(request, "index.html", context)
 
 def post_list(request):
-    #return HttpResponse("<h1>List<h1>")
+    queryset = Post.objects.all()
 
     context = {
+            "object_list": queryset,
             "title": "List"
         }
     return render(request, "index.html", context)
