@@ -11,12 +11,12 @@ def post_create(request):
 
 # Retrieve operation
 
-def post_detail(request):
+def post_detail(request, id=None):
     # get call, but this should not be used.
     #instance = Post.objects.get(id=1)
     #instane = get_object_or_404(Post,title = "Manager")
 
-    instance = get_object_or_404(Post, id=3)
+    instance = get_object_or_404(Post, id=id)
 
     context = {
         "title": instance.title,
