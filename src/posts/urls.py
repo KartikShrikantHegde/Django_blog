@@ -22,7 +22,7 @@ here even though its create url, detail function will be called.
 urlpatterns = [
     url(r'^$',  post_list),
     url(r'^create/$', post_create),
-    url(r'^detail/$', post_detail),
+    url(r'^(?P<id>\d+)/$', post_detail, name='detail'),
     url(r'^update/$', post_update),
     url(r'^delete/$', post_delete),
 
