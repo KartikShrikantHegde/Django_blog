@@ -1,13 +1,17 @@
+from django.contrib import messages
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
+
 from .forms import PostForm
 from .models import Post
+
 # Create your views here.
 
 # This is a function based view, so it takes in request and returns a response
 # render takes in a request
 
 def post_create(request):
+
     # This is the best method as it directly references the form model and the required fields as well.
 
     form = PostForm(request.POST or None)
@@ -15,7 +19,15 @@ def post_create(request):
         instance = form.save(commit=False)
         print form.cleaned_data.get("title")
         instance.save()
+
+        #messege success
+        messages.success(request, "Congratulations")
+        messages.success(request, "Successfully Created")
+
         return HttpResponseRedirect(instance.get_absolute_url())
+    else:
+        messages.error(request,"Error in creating the post")
+
     # This is not a recommended method
     # if request.method == "POST":
     #     print request.POST.get("content")
@@ -31,6 +43,7 @@ def post_create(request):
 # Retrieve operation
 
 def post_detail(request, id=None):
+
     # get call, but this should not be used.
     #instance = Post.objects.get(id=1)
     #instane = get_object_or_404(Post,title = "Manager")
@@ -73,7 +86,11 @@ def post_update(request, id = None):
     if form.is_valid():
         instance = form.save(commit=False)
         instance.save()
-        # messege success
+
+        # message success
+        messages.success(request, "Congratulations")
+        messages.success(request, "<a href='#'>Item</a> Successfully Saved", extra_tags='html_safe')
+
         return HttpResponseRedirect(instance.get_absolute_url())
 
     context = {
