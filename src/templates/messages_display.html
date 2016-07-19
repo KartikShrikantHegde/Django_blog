@@ -1,0 +1,13 @@
+{% if messages %}
+<div class='messages' >
+<ul class="messages">
+    {% for message in messages %}
+
+    <!-- You can add additional message tags. Right now tag is called success. To add additional tags you need to
+    make changes in view -->
+
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{% if "html_safe" in message.tags %}{{ message|safe }}{% else %}{{ message }}{% endif %}</li>
+    {% endfor %}
+</ul>
+</div>
+{% endif %}
