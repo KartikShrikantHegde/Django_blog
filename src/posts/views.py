@@ -8,10 +8,19 @@ from .models import Post
 # render takes in a request
 
 def post_create(request):
-    form = PostForm()
-    if request.method == "POST":
-        print request.POST.get("content")
-        print request.POST.get("title")
+    # This is the best method as it directly references the form model and the required fields as well.
+
+    form = PostForm(request.POST or None)
+    if form.is_valid():
+        instance = form.save(commit=False)
+        print form.cleaned_data.get("title")
+        instance.save()
+
+    # This is not a recommended method
+    # if request.method == "POST":
+    #     print request.POST.get("content")
+    #     print request.POST.get("title")
+    #     Post.objects.create(title = title)
     context = {
          "form": form,
      }
