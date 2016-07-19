@@ -1,23 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "base.html" %}
 
+{% block head_title %}
+{{ instance.title }} | {{ block.super}}
+{% endblock head_title %}
 
-{% if messages %}
-<ul class="messages">
-    {% for message in messages %}
+{% block content %}
 
-    <!-- You can add additional message tags. Right now tag is called success. To add additional tags you need to
-    make changes in view -->
-
-    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{% if "html_safe" in message.tags %}{{ message|safe }}{% else %}{{ message }}{% endif %}</li>
-    {% endfor %}
-</ul>
-{% endif %}
 
 <h1> {{ title }} </h1>
 
@@ -27,5 +15,4 @@
 {{ instance.timestamp }}<br/>
 
 
-</body>
-</html>
+{% endblock content %}
