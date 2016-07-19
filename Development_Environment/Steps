@@ -99,4 +99,8 @@ and make changes in index template where you can view objects or loop through th
 
 27. delete posts
 
+28. Template inheritance - whatever in between { block content } that belongs to that document
+rest of the base code can be used with extend. then again use block content for its own html stuffs.
+Also include in base for messages
+
 
