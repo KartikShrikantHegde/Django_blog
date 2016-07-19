@@ -25,8 +25,6 @@ def post_create(request):
         messages.success(request, "Successfully Created")
 
         return HttpResponseRedirect(instance.get_absolute_url())
-    else:
-        messages.error(request,"Error in creating the post")
 
     # This is not a recommended method
     # if request.method == "POST":
@@ -63,7 +61,7 @@ def post_list(request):
             "object_list": queryset,
             "title": "List"
         }
-    return render(request, "index.html", context)
+    return render(request, "post_list.html", context)
 
     # This case works for me as i am still logged into admin page
 
