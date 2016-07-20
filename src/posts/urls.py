@@ -1,4 +1,6 @@
-from django.conf.urls import url
+from django.conf import settings
+from django.conf.urls import include,url
+from django.conf.urls.static import static
 from django.contrib import admin
 
 from .views import (
@@ -27,4 +29,7 @@ urlpatterns = [
     url(r'^(?P<id>\d+)/delete/$', post_delete),
 
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
