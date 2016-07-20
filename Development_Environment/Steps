@@ -112,3 +112,13 @@ and then run the command in terminal.
 the static_cdn has admin which is related to django admin. So its basically seperating 2 diff static folders.
 The local static folder is what static we create.
 
+Also, when ever a new static file is added to local, run python manage.py collectstatic to copy into
+static_cdn. So its like sending into server or emulating in a way.
+Eg : If we have aws s3 set up, then all the static files would be sent there.
+
+Note : Even a simple change to css needs a python server run of collect static
+
+Also add media root in settings.py with media_cdn as folder - This refers to all the files uploaded from users.
+And add a folder called media_cdn to virtual env above src.
+
+Add a dynamic method to load the css instead of hardcoding in base.html
