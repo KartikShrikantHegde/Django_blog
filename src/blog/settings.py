@@ -133,3 +133,7 @@ STATICFILES_DIRS = [
 # this is the location above src in django blog - which is a virtual environment.
 
 STATIC_ROOT = os.path.join(os.path.dirname (BASE_DIR),"static_cdn")
+
+# This referes to all the files uploaded from users.
+
+MEDIA_ROOT = os.path.join(os.path.dirname (BASE_DIR),"media_cdn")
