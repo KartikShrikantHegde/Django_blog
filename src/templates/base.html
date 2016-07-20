@@ -1,8 +1,14 @@
-<!DOCTYPE html>
+{% load staticfiles %}
+
+<!--DOCTYPE html-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>{% block head_title %} Title {% endblock head_title %}</title>
+
+    <!-- dynamic linking of static files with load static files here -->
+
+    <link rel="stylesheet" href='{% static "css/base.css" %}'/>
     <style>
         {% block style %}
         {% endblock style %}
