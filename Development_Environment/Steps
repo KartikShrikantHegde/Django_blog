@@ -122,3 +122,9 @@ Also add media root in settings.py with media_cdn as folder - This refers to all
 And add a folder called media_cdn to virtual env above src.
 
 Add a dynamic method to load the css instead of hardcoding in base.html
+
+30. Bootstrap - with getbootstrap
+cdn add
+thumbnails add inside components
+
+
