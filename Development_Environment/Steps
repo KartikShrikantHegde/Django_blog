@@ -127,4 +127,7 @@ Add a dynamic method to load the css instead of hardcoding in base.html
 cdn add
 thumbnails add inside components
 
+31. Latest post first - queryset and negative timestamp in meta class
+Pagination -
+
 
