@@ -130,4 +130,8 @@ thumbnails add inside components
 31. Latest post first - queryset and negative timestamp in meta class
 Pagination - adding pages at the bottom
 
+32. Image and file upload
+add image to models.py and run python manage.py makemigrations and python manage.py migrate
+
+
 
