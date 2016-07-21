@@ -16,7 +16,7 @@ def post_create(request):
 
     # This is the best method as it directly references the form model and the required fields as well.
 
-    form = PostForm(request.POST or None)
+    form = PostForm(request.POST or None, request.FILES or None)
     if form.is_valid():
         instance = form.save(commit=False)
         print form.cleaned_data.get("title")
@@ -60,7 +60,7 @@ def post_list(request):
     queryset = Post.objects.all()
 
     paginator = Paginator(queryset, 5)  # Show 25 contacts per page
-    page_request_var = "a"
+    page_request_var = "page"
     page = request.GET.get(page_request_var)
     try:
         queryset = paginator.page(page)
@@ -96,7 +96,7 @@ def post_list(request):
 def post_update(request, id = None):
 
     instance = get_object_or_404(Post, id=id)
-    form = PostForm(request.POST or None, instance = instance)
+    form = PostForm(request.POST or None, request.FILES or None,instance = instance)
 
     if form.is_valid():
         instance = form.save(commit=False)
