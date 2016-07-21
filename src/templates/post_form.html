@@ -13,7 +13,7 @@
 <!-- CSRF stands for cross site request forgery. So this says your site needs security
 Other sites just cant send post data to you. my website needs to validate to see its good data -->
 
-<form method="post" action="">{% csrf_token %}
+<form method="post" action="" enctype="multipart/form-data">{% csrf_token %}
 
 {{ form.as_p }}
 
