@@ -1,3 +1,4 @@
+from urllib import quote_plus
 from django.contrib import messages
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render
@@ -49,10 +50,12 @@ def post_detail(request, slug=None):
     #instane = get_object_or_404(Post,title = "Manager")
 
     instance = get_object_or_404(Post, slug=slug)
+    share_string = quote_plus(instance.content)
 
     context = {
         "title": instance.title,
-        "instance":instance
+        "instance":instance,
+        "share_string":share_string,
     }
     return render(request, "post_detail.html", context)
 
