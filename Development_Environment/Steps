@@ -136,6 +136,9 @@ add image to models.py and run python manage.py makemigrations and python manage
 33. implementing slug field - improvements to url
 involves deleting databases and migrations except init
 then add slug field and run migrate -> makemigrations -> migrate
+Make corresponding changes to other fields
+
+34. Facebook, twitter sharing and url encoding
 
 
 
