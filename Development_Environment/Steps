@@ -133,5 +133,9 @@ Pagination - adding pages at the bottom
 32. Image and file upload
 add image to models.py and run python manage.py makemigrations and python manage.py migrate
 
+33. implementing slug field - improvements to url
+involves deleting databases and migrations except init
+then add slug field and run migrate -> makemigrations -> migrate
+
 
 
