@@ -24,6 +24,8 @@ class Post(models.Model):
     height_field = models.IntegerField(default=0)
     width_field = models.IntegerField(default=0)
     content = models.TextField()
+    draft = models.BooleanField(default=False)
+    publish = models.DateField(auto_now=False, auto_now_add=False)
 
     ''' Auto_now        --> Every time it is something is saved into database it will update it
         Auto_now_add    -->  Whenever it is added into the database initially not whenever it is saved.
