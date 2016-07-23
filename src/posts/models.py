@@ -5,8 +5,18 @@ from django.db import models
 from django.core.urlresolvers import reverse
 from django.db.models.signals import pre_save
 from django.utils.text import slugify
+from django.utils import timezone
 
 # Create your models here.
+
+# Post.objects.all() -- these 2 are some model controllers
+#Post.objects.create()
+# this is basically overriding default all
+# The super call here gets all the objects upon which we can add the filter of draf and timezone
+
+class PostManager(models.Manager):
+    def active(self,*args,**kwargs):
+        return super(PostManager, self).filter(draft=False).filter(publish__lte=timezone.now())
 
 def upload_location(instance,filename):
     return "%s/%s" % (instance.id,filename)
@@ -33,6 +43,8 @@ class Post(models.Model):
 
     updated = models.DateTimeField(auto_now=True,auto_now_add=False)
     timestamp = models.DateTimeField(auto_now=False,auto_now_add=True)
+
+    objects = PostManager()
 
 # If the unicode data is not there then it will just show 'Post object' in the admin page rather than showing the actual object
 # So the unicode is important as it refers to the actual object being created
