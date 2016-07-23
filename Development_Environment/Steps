@@ -152,5 +152,7 @@ complex involves - authenticate, threading
 39. Draft and publish
 Publish doesnt take default value in models. So need to provide one in the command line as 1 and then timezone.now()
 
+40. Models manager
+
 
 
