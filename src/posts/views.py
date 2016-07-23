@@ -5,6 +5,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.shortcuts import render, get_object_or_404, redirect
 
+
 from .forms import PostForm
 from .models import Post
 
@@ -19,12 +20,16 @@ def post_create(request):
     if not request.user.is_staff or not request.user.is_superuser:
         raise Http404
 
+    if not request.user.is_authenticated:
+        raise Http404
+
     # This is the best method as it directly references the form model and the required fields as well.
 
     form = PostForm(request.POST or None, request.FILES or None)
     if form.is_valid():
         instance = form.save(commit=False)
-        print form.cleaned_data.get("title")
+        instance.user = request.user
+        #print form.cleaned_data.get("title")
         instance.save()
 
         #messege success
