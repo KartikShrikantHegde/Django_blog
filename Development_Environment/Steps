@@ -144,5 +144,7 @@ Make corresponding changes to other fields
 
 36. USER permissions - # Not to allow other than staff and admin to create posts.
 
+37. assosiate users with foreign key
+
 
 
