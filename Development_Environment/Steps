@@ -149,5 +149,8 @@ Make corresponding changes to other fields
 38. Facebook comments - simple method
 complex involves - authenticate, threading
 
+39. Draft and publish
+Publish doesnt take default value in models. So need to provide one in the command line as 1 and then timezone.now()
+
 
 
