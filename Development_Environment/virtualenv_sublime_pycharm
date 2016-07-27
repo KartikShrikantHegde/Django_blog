@@ -1,3 +1,5 @@
+Get pip - a python package installer
+
 $ sudo pip install pip --upgrade OR
 $ sudo easy_install pip
 
