@@ -48,6 +48,8 @@ $ ls
 
 $ python manage.py runserver      # starts the server
 
+this will trigger the development server acting as if its a production server.
+
 -------------------------------------------------------------------------------------
 
 In Sublime, project -> save project As -> django-blog.sublime-project -> save
