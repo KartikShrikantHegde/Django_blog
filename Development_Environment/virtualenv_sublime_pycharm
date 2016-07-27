@@ -12,10 +12,20 @@ $ mkdir django-project
 $ cd django-project
 
 Activate
---------
+--------------------
 
 $ virtualenv .
 $ source bin/activate
+
+OR 
+
+Go to any location with virtualenv installed.
+
+$ virtualenv my_wd
+$ cd my_wd
+$ source bin/activate
+
+----------------------
 
 Check the packages installed
 $ pip freeze
