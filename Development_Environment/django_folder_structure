@@ -12,7 +12,7 @@ $ cd blog
 
 manage.py                   # handles most of the django built in functions , not edited
 blog                        # directory with same name as root. Therefore change root to source or src
-  __init__.py
+  __init__.py               # tells the folder is a python file
   setting.py                # to set all the default stuffs
   urls.py                   # manage urls requests
   wsgi.py                   # Allows the project to be in a deployable application
